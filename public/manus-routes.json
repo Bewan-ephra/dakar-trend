@@ -1,0 +1,17 @@
+{
+  "routes": [
+    { "path": "/", "title": "Accueil — Dakar Trend" },
+    { "path": "/catalogue", "title": "Catalogue — Dakar Trend" },
+    { "path": "/produit/:id", "title": "Produit — Dakar Trend" },
+    { "path": "/favoris", "title": "Favoris — Dakar Trend" },
+    { "path": "/panier", "title": "Panier — Dakar Trend" },
+    { "path": "/checkout", "title": "Paiement — Dakar Trend" },
+    { "path": "/compte", "title": "Mon compte — Dakar Trend" },
+    { "path": "/admin", "title": "Administration — Dakar Trend" },
+    { "path": "/a-propos", "title": "À propos — Dakar Trend" },
+    { "path": "/contact", "title": "Contact — Dakar Trend" },
+    { "path": "/faq", "title": "FAQ — Dakar Trend" },
+    { "path": "/cgv", "title": "CGV — Dakar Trend" },
+    { "path": "/retours", "title": "Retours — Dakar Trend" }
+  ]
+}
