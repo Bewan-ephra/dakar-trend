@@ -1,0 +1,1548 @@
+[
+  {
+    "id": "PRD-001",
+    "name": "Robe satinée Midnight",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 18500,
+    "oldPrice": 25000,
+    "discount": 26,
+    "badge": "Nouveau",
+    "rating": 4.2,
+    "reviews": 12,
+    "image": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Satin premium",
+    "stock": 3,
+    "isFlash": true,
+    "description": "Robe satinée Midnight pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Satin premium",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-002",
+    "name": "Ensemble cargo Yoff",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 22500,
+    "oldPrice": 32000,
+    "discount": 30,
+    "badge": "Best-seller",
+    "rating": 4.9,
+    "reviews": 29,
+    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Coton twill",
+    "stock": 14,
+    "isFlash": false,
+    "description": "Ensemble cargo Yoff pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Coton twill",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-003",
+    "name": "Chemise oversize Dakar",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 14500,
+    "oldPrice": 19000,
+    "discount": 24,
+    "badge": "Nouveau",
+    "rating": 4.8,
+    "reviews": 46,
+    "image": "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Coton respirant",
+    "stock": 25,
+    "isFlash": false,
+    "description": "Chemise oversize Dakar pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Coton respirant",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-004",
+    "name": "Top crochet Soleil",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 9500,
+    "oldPrice": 14000,
+    "discount": 32,
+    "badge": "Petit prix",
+    "rating": 4.7,
+    "reviews": 63,
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Maille douce",
+    "stock": 13,
+    "isFlash": false,
+    "description": "Top crochet Soleil pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Maille douce",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-005",
+    "name": "Blazer rose Baobab",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 29500,
+    "oldPrice": 42000,
+    "discount": 30,
+    "badge": "Édition limitée",
+    "rating": 4.6,
+    "reviews": 80,
+    "image": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Polyester premium",
+    "stock": 24,
+    "isFlash": true,
+    "description": "Blazer rose Baobab pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Polyester premium",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-006",
+    "name": "Jean wide leg Ngor",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 19900,
+    "oldPrice": 27000,
+    "discount": 26,
+    "badge": "Best-seller",
+    "rating": 4.5,
+    "reviews": 97,
+    "image": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Denim souple",
+    "stock": 12,
+    "isFlash": false,
+    "description": "Jean wide leg Ngor pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Denim souple",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-007",
+    "name": "Jupe plissée Teranga",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 16500,
+    "oldPrice": 22000,
+    "discount": 25,
+    "badge": "Nouveau",
+    "rating": 4.4,
+    "reviews": 25,
+    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Viscose",
+    "stock": 23,
+    "isFlash": false,
+    "description": "Jupe plissée Teranga pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Viscose",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-008",
+    "name": "T-shirt graphique Plateau",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 7900,
+    "oldPrice": 11000,
+    "discount": 28,
+    "badge": "Petit prix",
+    "rating": 4.3,
+    "reviews": 42,
+    "image": "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Coton bio",
+    "stock": 11,
+    "isFlash": false,
+    "description": "T-shirt graphique Plateau pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Coton bio",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-009",
+    "name": "Hoodie Wave 221",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 24900,
+    "oldPrice": 35000,
+    "discount": 29,
+    "badge": "Stock limité",
+    "rating": 4.2,
+    "reviews": 59,
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Molleton chaud",
+    "stock": 22,
+    "isFlash": true,
+    "description": "Hoodie Wave 221 pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Molleton chaud",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-010",
+    "name": "Pantalon lin Almadies",
+    "category": "Vêtements",
+    "kind": "clothing",
+    "price": 17900,
+    "oldPrice": 24000,
+    "discount": 25,
+    "badge": "Nouveau",
+    "rating": 4.9,
+    "reviews": 76,
+    "image": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Rose poudré",
+      "Écru"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "material": "Lin mélangé",
+    "stock": 10,
+    "isFlash": false,
+    "description": "Pantalon lin Almadies pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Lin mélangé",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-011",
+    "name": "Baskets Cloud Dakar",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 27900,
+    "oldPrice": 39000,
+    "discount": 28,
+    "badge": "Best-seller",
+    "rating": 4.8,
+    "reviews": 93,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Mesh respirant",
+    "stock": 21,
+    "isFlash": false,
+    "description": "Baskets Cloud Dakar pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Mesh respirant",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-012",
+    "name": "Sneakers Sunset Gum",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 32500,
+    "oldPrice": 45000,
+    "discount": 28,
+    "badge": "Nouveau",
+    "rating": 4.7,
+    "reviews": 21,
+    "image": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Cuir vegan",
+    "stock": 9,
+    "isFlash": false,
+    "description": "Sneakers Sunset Gum pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Cuir vegan",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-013",
+    "name": "Sandales plates Saloum",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 12900,
+    "oldPrice": 18000,
+    "discount": 28,
+    "badge": "Petit prix",
+    "rating": 4.6,
+    "reviews": 38,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Simili cuir",
+    "stock": 20,
+    "isFlash": true,
+    "description": "Sandales plates Saloum pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Simili cuir",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-014",
+    "name": "Mocassins City Black",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 24500,
+    "oldPrice": 33000,
+    "discount": 26,
+    "badge": "Best-seller",
+    "rating": 4.5,
+    "reviews": 55,
+    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Cuir souple",
+    "stock": 8,
+    "isFlash": false,
+    "description": "Mocassins City Black pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Cuir souple",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-015",
+    "name": "Running Teranga",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 29900,
+    "oldPrice": 41000,
+    "discount": 27,
+    "badge": "Stock limité",
+    "rating": 4.4,
+    "reviews": 72,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Semelle EVA",
+    "stock": 19,
+    "isFlash": true,
+    "description": "Running Teranga pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Semelle EVA",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-016",
+    "name": "Claquettes Piscine Pink",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 6900,
+    "oldPrice": 9500,
+    "discount": 27,
+    "badge": "Petit prix",
+    "rating": 4.3,
+    "reviews": 89,
+    "image": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "EVA injecté",
+    "stock": 7,
+    "isFlash": false,
+    "description": "Claquettes Piscine Pink pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "EVA injecté",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-017",
+    "name": "Baskets Mini Dakar",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 19900,
+    "oldPrice": 28000,
+    "discount": 29,
+    "badge": "Nouveau",
+    "rating": 4.2,
+    "reviews": 17,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Toile canvas",
+    "stock": 18,
+    "isFlash": true,
+    "description": "Baskets Mini Dakar pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Toile canvas",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-018",
+    "name": "Bottines Night Out",
+    "category": "Chaussures",
+    "kind": "shoes",
+    "price": 36900,
+    "oldPrice": 52000,
+    "discount": 29,
+    "badge": "Édition limitée",
+    "rating": 4.9,
+    "reviews": 34,
+    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Blanc",
+      "Noir",
+      "Rose"
+    ],
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "material": "Cuir synthétique",
+    "stock": 6,
+    "isFlash": false,
+    "description": "Bottines Night Out pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Cuir synthétique",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-019",
+    "name": "Collier perles Ndar",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 8900,
+    "oldPrice": 13500,
+    "discount": 34,
+    "badge": "Nouveau",
+    "rating": 4.8,
+    "reviews": 51,
+    "image": "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Acier inoxydable",
+    "stock": 17,
+    "isFlash": false,
+    "description": "Collier perles Ndar pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Acier inoxydable",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-020",
+    "name": "Créoles Soleil dorées",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 7500,
+    "oldPrice": 11000,
+    "discount": 32,
+    "badge": "Best-seller",
+    "rating": 4.7,
+    "reviews": 68,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Acier inoxydable",
+    "stock": 5,
+    "isFlash": false,
+    "description": "Créoles Soleil dorées pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Acier inoxydable",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-021",
+    "name": "Bracelet chaîne Fine",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 9900,
+    "oldPrice": 15000,
+    "discount": 34,
+    "badge": "Petit prix",
+    "rating": 4.6,
+    "reviews": 85,
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "M"
+    ],
+    "material": "Acier doré",
+    "stock": 16,
+    "isFlash": true,
+    "description": "Bracelet chaîne Fine pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Acier doré",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-022",
+    "name": "Bague Initiale",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 6500,
+    "oldPrice": 9000,
+    "discount": 28,
+    "badge": "Nouveau",
+    "rating": 4.5,
+    "reviews": 13,
+    "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "52"
+    ],
+    "material": "Argent 925",
+    "stock": 4,
+    "isFlash": false,
+    "description": "Bague Initiale pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Argent 925",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-023",
+    "name": "Set bijoux Pearl Club",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 15900,
+    "oldPrice": 23000,
+    "discount": 31,
+    "badge": "Best-seller",
+    "rating": 4.4,
+    "reviews": 30,
+    "image": "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Perles d’eau douce",
+    "stock": 15,
+    "isFlash": false,
+    "description": "Set bijoux Pearl Club pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Perles d’eau douce",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-024",
+    "name": "Chaîne homme Ébène",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 11900,
+    "oldPrice": 17000,
+    "discount": 30,
+    "badge": "Nouveau",
+    "rating": 4.3,
+    "reviews": 47,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "60 cm"
+    ],
+    "material": "Acier noir",
+    "stock": 3,
+    "isFlash": false,
+    "description": "Chaîne homme Ébène pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Acier noir",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-025",
+    "name": "Boucles Mini Hoops",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 5900,
+    "oldPrice": 8500,
+    "discount": 31,
+    "badge": "Petit prix",
+    "rating": 4.2,
+    "reviews": 64,
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Acier argenté",
+    "stock": 14,
+    "isFlash": true,
+    "description": "Boucles Mini Hoops pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Acier argenté",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-026",
+    "name": "Pendentif Cauri",
+    "category": "Bijoux",
+    "kind": "jewelry",
+    "price": 10900,
+    "oldPrice": 16000,
+    "discount": 32,
+    "badge": "Stock limité",
+    "rating": 4.9,
+    "reviews": 81,
+    "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Doré",
+      "Argenté",
+      "Acier"
+    ],
+    "sizes": [
+      "45 cm"
+    ],
+    "material": "Laiton plaqué or",
+    "stock": 25,
+    "isFlash": true,
+    "description": "Pendentif Cauri pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Laiton plaqué or",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-027",
+    "name": "Montre Gold Hour",
+    "category": "Montres",
+    "kind": "watch",
+    "price": 34900,
+    "oldPrice": 49000,
+    "discount": 29,
+    "badge": "Best-seller",
+    "rating": 4.8,
+    "reviews": 98,
+    "image": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Or",
+      "Argent",
+      "Noir"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 12 mois",
+    "stock": 13,
+    "isFlash": false,
+    "description": "Montre Gold Hour pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 12 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-028",
+    "name": "Montre Classic Mesh",
+    "category": "Montres",
+    "kind": "watch",
+    "price": 28900,
+    "oldPrice": 39000,
+    "discount": 26,
+    "badge": "Nouveau",
+    "rating": 4.7,
+    "reviews": 26,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Or",
+      "Argent",
+      "Noir"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 12 mois",
+    "stock": 24,
+    "isFlash": false,
+    "description": "Montre Classic Mesh pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 12 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-029",
+    "name": "Montre Sport Pulse",
+    "category": "Montres",
+    "kind": "watch",
+    "price": 42500,
+    "oldPrice": 58000,
+    "discount": 27,
+    "badge": "Stock limité",
+    "rating": 4.6,
+    "reviews": 43,
+    "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Or",
+      "Argent",
+      "Noir"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 24 mois",
+    "stock": 12,
+    "isFlash": true,
+    "description": "Montre Sport Pulse pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 24 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-030",
+    "name": "Montre Mini Rose",
+    "category": "Montres",
+    "kind": "watch",
+    "price": 23900,
+    "oldPrice": 33000,
+    "discount": 28,
+    "badge": "Petit prix",
+    "rating": 4.5,
+    "reviews": 60,
+    "image": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Or",
+      "Argent",
+      "Noir"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 6 mois",
+    "stock": 23,
+    "isFlash": false,
+    "description": "Montre Mini Rose pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 6 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-031",
+    "name": "Montre Urban Chrono",
+    "category": "Montres",
+    "kind": "watch",
+    "price": 45900,
+    "oldPrice": 65000,
+    "discount": 29,
+    "badge": "Édition limitée",
+    "rating": 4.4,
+    "reviews": 77,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1523170335258-f5ed11844f02?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Or",
+      "Argent",
+      "Noir"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 24 mois",
+    "stock": 11,
+    "isFlash": false,
+    "description": "Montre Urban Chrono pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 24 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-032",
+    "name": "AirPods Case Pearl",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 5900,
+    "oldPrice": 8500,
+    "discount": 31,
+    "badge": "Petit prix",
+    "rating": 4.3,
+    "reviews": 94,
+    "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Silicone soft-touch",
+    "stock": 22,
+    "isFlash": false,
+    "description": "AirPods Case Pearl pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Silicone soft-touch",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-033",
+    "name": "Écouteurs Bass Pro",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 18900,
+    "oldPrice": 26000,
+    "discount": 27,
+    "badge": "Best-seller",
+    "rating": 4.2,
+    "reviews": 22,
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 6 mois",
+    "stock": 10,
+    "isFlash": true,
+    "description": "Écouteurs Bass Pro pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 6 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-034",
+    "name": "Casque Studio Wave",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 32900,
+    "oldPrice": 45000,
+    "discount": 27,
+    "badge": "Nouveau",
+    "rating": 4.9,
+    "reviews": 39,
+    "image": "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 12 mois",
+    "stock": 21,
+    "isFlash": false,
+    "description": "Casque Studio Wave pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 12 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-035",
+    "name": "Chargeur rapide 25W",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 7900,
+    "oldPrice": 12000,
+    "discount": 34,
+    "badge": "Petit prix",
+    "rating": 4.8,
+    "reviews": 56,
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 3 mois",
+    "stock": 9,
+    "isFlash": false,
+    "description": "Chargeur rapide 25W pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 3 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-036",
+    "name": "Powerbank Pocket 10K",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 14900,
+    "oldPrice": 21000,
+    "discount": 29,
+    "badge": "Best-seller",
+    "rating": 4.7,
+    "reviews": 73,
+    "image": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 6 mois",
+    "stock": 20,
+    "isFlash": false,
+    "description": "Powerbank Pocket 10K pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 6 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-037",
+    "name": "Coque iPhone Chrome",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 6900,
+    "oldPrice": 9500,
+    "discount": 27,
+    "badge": "Nouveau",
+    "rating": 4.6,
+    "reviews": 90,
+    "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "TPU renforcé",
+    "stock": 8,
+    "isFlash": true,
+    "description": "Coque iPhone Chrome pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "TPU renforcé",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-038",
+    "name": "Enceinte Mini Baobab",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 21900,
+    "oldPrice": 29000,
+    "discount": 24,
+    "badge": "Stock limité",
+    "rating": 4.5,
+    "reviews": 18,
+    "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Garantie 6 mois",
+    "stock": 19,
+    "isFlash": true,
+    "description": "Enceinte Mini Baobab pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Garantie 6 mois",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-039",
+    "name": "Câble tressé USB-C",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 4900,
+    "oldPrice": 7000,
+    "discount": 30,
+    "badge": "Petit prix",
+    "rating": 4.4,
+    "reviews": 35,
+    "image": "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Nylon tressé",
+    "stock": 7,
+    "isFlash": false,
+    "description": "Câble tressé USB-C pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Nylon tressé",
+      "Échange sous 7 jours"
+    ]
+  },
+  {
+    "id": "PRD-040",
+    "name": "Support téléphone Mag",
+    "category": "Audio & accessoires",
+    "kind": "tech",
+    "price": 12900,
+    "oldPrice": 18000,
+    "discount": 28,
+    "badge": "Nouveau",
+    "rating": 4.3,
+    "reviews": 52,
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=900&q=85&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=900&q=85&auto=format&fit=crop"
+    ],
+    "colors": [
+      "Noir",
+      "Blanc",
+      "Rose"
+    ],
+    "sizes": [
+      "Unique"
+    ],
+    "material": "Aluminium",
+    "stock": 18,
+    "isFlash": false,
+    "description": "Support téléphone Mag pensé pour les looks du quotidien à Dakar. Une pièce facile à porter, avec une finition soignée et un style qui se remarque sans en faire trop.",
+    "specs": [
+      "Expédition depuis Dakar",
+      "Contrôle qualité avant envoi",
+      "Aluminium",
+      "Échange sous 7 jours"
+    ]
+  }
+]
