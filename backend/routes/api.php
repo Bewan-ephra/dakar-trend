@@ -10,4 +10,5 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
 Route::post('/orders', [OrderController::class, 'store']);
 Route::get('/admin/orders', [OrderController::class, 'index']);
+Route::patch('/admin/orders/{order}', [OrderController::class, 'update']);
 Route::get('/orders/{reference}', [OrderController::class, 'show']);

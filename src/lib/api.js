@@ -47,3 +47,14 @@ export async function fetchOrders() {
   if (!response.ok) throw new Error(`Orders API ${response.status}`)
   return response.json()
 }
+
+export async function updateOrder(orderId, payload) {
+  const response = await fetch(`${API_URL}/admin/orders/${orderId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(payload),
+  })
+  const data = await response.json()
+  if (!response.ok) throw new Error(data.message || 'Impossible de mettre à jour la commande.')
+  return data
+}

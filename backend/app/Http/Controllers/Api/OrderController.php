@@ -55,4 +55,18 @@ class OrderController extends Controller
     {
         return response()->json(Order::where('reference', $reference)->with('items', 'payments')->firstOrFail());
     }
+
+    public function update(Request $request, Order $order)
+    {
+        $data = $request->validate([
+            'order_status' => ['sometimes', Rule::in(['pending_confirmation', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled'])],
+            'payment_status' => ['sometimes', Rule::in(['pending', 'link_sent', 'paid', 'failed'])],
+            'payment_reference' => ['nullable', 'string', 'max:120'],
+        ]);
+        $order->update(collect($data)->only(['order_status', 'payment_status'])->all());
+        if (!empty($data['payment_reference'])) {
+            $order->payments()->latest()->first()?->update(['external_reference' => $data['payment_reference'], 'status' => $data['payment_status'] ?? 'paid', 'paid_at' => ($data['payment_status'] ?? 'paid') === 'paid' ? now() : null]);
+        }
+        return response()->json($order->fresh()->load('payments'));
+    }
 }
