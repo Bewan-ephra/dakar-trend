@@ -9,7 +9,7 @@ import {
   Trash2, Truck, UserCheck, UsersRound, Wrench, X, Zap
 } from 'lucide-react'
 import { categories, formatPrice, products } from './data/products'
-import { createOrder, fetchCatalog, fetchOrders, updateOrder } from './lib/api'
+import { createOrder, fetchCatalog, fetchOrders, getCurrentUser, updateOrder } from './lib/api'
 import './styles.css'
 
 const navCategories = ['Femme', 'Homme', 'Enfant', 'Chaussures', 'Bijoux', 'Montres', 'Audio']
@@ -33,6 +33,7 @@ function App() {
   const [orderResult, setOrderResult] = useState(null)
   const [adminSection, setAdminSection] = useState('dashboard')
   const [catalogProducts, setCatalogProducts] = useState(products)
+  const [adminAccess, setAdminAccess] = useState('idle')
 
   useEffect(() => {
     const onPop = () => setPath(window.location.pathname || '/')
@@ -49,6 +50,16 @@ function App() {
     fetchCatalog().then(items => { if (active) setCatalogProducts(items) })
     return () => { active = false }
   }, [])
+
+  useEffect(() => {
+    if (path !== '/admin') { setAdminAccess('idle'); return undefined }
+    setAdminAccess('checking')
+    getCurrentUser().then(user => {
+      if (user) setAdminAccess('authenticated')
+      else window.location.href = 'http://localhost:8000/auth/login'
+    }).catch(() => setAdminAccess('error'))
+    return undefined
+  }, [path])
 
   const navigate = (nextPath) => {
     const cleanPath = nextPath.split('?')[0]
@@ -97,7 +108,7 @@ function App() {
   }
 
   const renderPage = () => {
-    if (path === '/admin') return <AdminPage section={adminSection} setSection={setAdminSection} navigate={navigate} notify={notify} />
+    if (path === '/admin') return adminAccess === 'authenticated' ? <AdminPage section={adminSection} setSection={setAdminSection} navigate={navigate} notify={notify} /> : <section className="container info-page"><span className="kicker">BACK OFFICE</span><h1>Vérification de la session…</h1><p>Redirection vers la connexion administrateur.</p></section>
     if (path === '/catalogue') return <CataloguePage products={catalogProducts} activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/favoris') return <FavoritesPage products={favoriteProducts} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/panier') return <CartPage cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} cartTotal={cartTotal} navigate={navigate} />
@@ -322,7 +333,7 @@ function AdminProducts({ notify }) { return <div className="admin-content"><div 
 function AdminOrders({ notify }) {
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
-  useEffect(() => { fetchOrders().then(payload => setOrders(payload.data || [])).catch(error => { if (error.message === 'AUTH_REQUIRED') window.location.href = 'http://127.0.0.1:8000/auth/login'; else notify('Impossible de charger les commandes Laravel') }).finally(() => setLoading(false)) }, [])
+  useEffect(() => { fetchOrders().then(payload => setOrders(payload.data || [])).catch(error => { if (error.message === 'AUTH_REQUIRED') window.location.href = 'http://localhost:8000/auth/login'; else notify('Impossible de charger les commandes Laravel') }).finally(() => setLoading(false)) }, [])
   const tone = status => status === 'delivered' ? 'green' : status === 'shipped' ? 'purple' : status === 'confirmed' ? 'blue' : 'yellow'
   const label = status => ({ pending_confirmation: 'À confirmer', confirmed: 'Confirmée', processing: 'En préparation', shipped: 'Expédiée', delivered: 'Livrée', cancelled: 'Annulée' }[status] || status)
   const changeStatus = async (order, value) => { try { await updateOrder(order.id, { order_status: value }); setOrders(current => current.map(item => item.id === order.id ? { ...item, order_status: value } : item)); notify('Statut de la commande mis à jour') } catch (error) { notify(error.message) } }

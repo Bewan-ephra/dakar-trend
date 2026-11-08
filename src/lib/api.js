@@ -1,6 +1,6 @@
 import { products as fallbackProducts } from '../data/products'
 
-const API_URL = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api').replace(/\/$/, '')
+const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000/api').replace(/\/$/, '')
 
 function normalizeProduct(item) {
   const category = typeof item.category === 'string' ? item.category : item.category?.name
@@ -47,6 +47,13 @@ export async function fetchOrders() {
   if (response.status === 401) throw new Error('AUTH_REQUIRED')
   if (!response.ok) throw new Error(`Orders API ${response.status}`)
   return response.json()
+}
+
+export async function getCurrentUser() {
+  const response = await fetch(`${API_URL}/me`, { credentials: 'include', headers: { Accept: 'application/json' } })
+  if (response.status === 401) return null
+  if (!response.ok) throw new Error(`Auth API ${response.status}`)
+  return (await response.json()).user
 }
 
 export async function updateOrder(orderId, payload) {
