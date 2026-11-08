@@ -13,13 +13,23 @@ class AuthController extends Controller
     {
         $portal = env('MANUS_OAUTH_PORTAL_URL');
         $appId = env('MANUS_PROJECT_ID');
-        if (! $portal || ! $appId) return response('OAuth Manus non configuré. Ajoutez MANUS_PROJECT_ID et MANUS_OAUTH_PORTAL_URL dans backend/.env.', 503);
+        if (! $portal || ! $appId) return response()->view('auth.login');
         $redirectUri = env('MANUS_OAUTH_REDIRECT_URI', url('/auth/callback'));
         $nonce = Str::random(40);
         $request->session()->put('oauth_nonce', $nonce);
         $state = base64_encode(json_encode(['redirectUri' => $redirectUri, 'nonce' => $nonce], JSON_THROW_ON_ERROR));
         $url = rtrim($portal, '/').'/app-auth?'.http_build_query(['appId' => $appId, 'redirectUri' => $redirectUri, 'state' => $state, 'responseType' => 'code']);
         return redirect()->away($url)->withCookie(cookie('oauth_nonce', $nonce, 5, null, null, false, true, false, 'Lax'));
+    }
+
+    public function localLogin(Request $request)
+    {
+        $credentials = $request->validate(['email' => ['required', 'email'], 'password' => ['required', 'string']]);
+        if (! Auth::attempt([...$credentials, 'is_admin' => true], true)) {
+            return back()->withErrors(['email' => 'Identifiants administrateur incorrects.'])->withInput();
+        }
+        $request->session()->regenerate();
+        return redirect()->to(rtrim(env('FRONTEND_URL', 'http://localhost:3000'), '/').'/admin');
     }
 
     public function callback(Request $request)
