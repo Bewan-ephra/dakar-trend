@@ -9,6 +9,7 @@ import {
   Trash2, Truck, UserCheck, UsersRound, Wrench, X, Zap
 } from 'lucide-react'
 import { categories, formatPrice, products } from './data/products'
+import { createOrder, fetchCatalog } from './lib/api'
 import './styles.css'
 
 const navCategories = ['Femme', 'Homme', 'Enfant', 'Chaussures', 'Bijoux', 'Montres', 'Audio']
@@ -29,7 +30,9 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false)
   const [toast, setToast] = useState('')
   const [orderPlaced, setOrderPlaced] = useState(false)
+  const [orderResult, setOrderResult] = useState(null)
   const [adminSection, setAdminSection] = useState('dashboard')
+  const [catalogProducts, setCatalogProducts] = useState(products)
 
   useEffect(() => {
     const onPop = () => setPath(window.location.pathname || '/')
@@ -40,6 +43,12 @@ function App() {
   useEffect(() => {
     document.title = path === '/admin' ? 'Admin — Dakar Trend' : 'Dakar Trend — Les looks qui partent vite'
   }, [path])
+
+  useEffect(() => {
+    let active = true
+    fetchCatalog().then(items => { if (active) setCatalogProducts(items) })
+    return () => { active = false }
+  }, [])
 
   const navigate = (nextPath) => {
     const cleanPath = nextPath.split('?')[0]
@@ -79,8 +88,8 @@ function App() {
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
   const cartTotal = cart.reduce((total, item) => total + item.product.price * item.quantity, 0)
-  const favoriteProducts = products.filter(product => favorites.includes(product.id))
-  const routeProduct = path.startsWith('/produit/') ? products.find(product => product.id === path.split('/').pop()) : null
+  const favoriteProducts = catalogProducts.filter(product => favorites.includes(product.id))
+  const routeProduct = path.startsWith('/produit/') ? catalogProducts.find(product => product.id === path.split('/').pop()) : null
 
   const selectCategory = (category) => {
     setActiveCategory(category)
@@ -89,14 +98,14 @@ function App() {
 
   const renderPage = () => {
     if (path === '/admin') return <AdminPage section={adminSection} setSection={setAdminSection} navigate={navigate} notify={notify} />
-    if (path === '/catalogue') return <CataloguePage products={products} activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
+    if (path === '/catalogue') return <CataloguePage products={catalogProducts} activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/favoris') return <FavoritesPage products={favoriteProducts} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/panier') return <CartPage cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} cartTotal={cartTotal} navigate={navigate} />
-    if (path === '/checkout') return <CheckoutPage cart={cart} cartTotal={cartTotal} setCart={setCart} orderPlaced={orderPlaced} setOrderPlaced={setOrderPlaced} navigate={navigate} notify={notify} />
+    if (path === '/checkout') return <CheckoutPage cart={cart} cartTotal={cartTotal} setCart={setCart} orderPlaced={orderPlaced} setOrderPlaced={setOrderPlaced} orderResult={orderResult} setOrderResult={setOrderResult} navigate={navigate} notify={notify} />
     if (path === '/compte') return <AccountPage navigate={navigate} />
-    if (routeProduct) return <ProductPage product={routeProduct} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
+    if (routeProduct) return <ProductPage product={routeProduct} products={catalogProducts} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path !== '/') return <InfoPage path={path} navigate={navigate} />
-    return <HomePage products={products} selectCategory={selectCategory} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
+    return <HomePage products={catalogProducts} selectCategory={selectCategory} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
   }
 
   return (
@@ -204,7 +213,7 @@ function CataloguePage({ products, activeCategory, setActiveCategory, search, se
 
 function ArrowDownIcon() { return <ChevronDown size={17} /> }
 
-function ProductPage({ product, addToCart, favorites, toggleFavorite, navigate }) {
+function ProductPage({ product, products, addToCart, favorites, toggleFavorite, navigate }) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [size, setSize] = useState(product.sizes[0])
   const [color, setColor] = useState(product.colors[0])
@@ -231,24 +240,39 @@ function OrderSummary({ cartTotal, navigate }) {
   return <aside className="order-summary"><h2>Résumé de commande</h2><div><span>Sous-total</span><b>{money(cartTotal)}</b></div><div><span>Livraison</span><b>{cartTotal >= 50000 ? 'Offerte' : '2 000 FCFA'}</b></div><hr /><div className="summary-total"><span>Total estimé</span><strong>{money(cartTotal + (cartTotal >= 50000 ? 0 : 2000))}</strong></div><button className="button button-coral full-width" onClick={() => navigate('/checkout')}>Continuer <ArrowRight size={17} /></button><div className="secure-note"><ShieldCheck size={15} /> Paiement sécurisé et données protégées</div></aside>
 }
 
-function CheckoutPage({ cart, cartTotal, setCart, orderPlaced, setOrderPlaced, navigate, notify }) {
+function CheckoutPage({ cart, cartTotal, setCart, orderPlaced, setOrderPlaced, orderResult, setOrderResult, navigate, notify }) {
   const [mode, setMode] = useState('delivery')
   const [payment, setPayment] = useState('wave')
   const [form, setForm] = useState({ firstName: '', lastName: '', address: '', city: 'Dakar', phone: '' })
   const [error, setError] = useState('')
   const update = (key, value) => setForm(current => ({ ...current, [key]: value }))
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault()
     if (!cart.length) return navigate('/catalogue')
     const required = mode === 'pickup' ? ['firstName', 'lastName', 'phone'] : ['firstName', 'lastName', 'address', 'city', 'phone']
     const missing = required.find(key => !form[key].trim())
     if (missing) { setError('Complète les champs obligatoires pour continuer.'); return }
     setError('')
-    setOrderPlaced(true)
-    setCart([])
-    notify('Commande enregistrée')
+    try {
+      const result = await createOrder({
+        first_name: form.firstName,
+        last_name: form.lastName,
+        phone: form.phone,
+        delivery_mode: mode,
+        address: mode === 'delivery' ? form.address : null,
+        city: mode === 'delivery' ? form.city : null,
+        payment_method: payment,
+        items: cart.map(item => ({ product_id: item.product.backendId || item.product.id, quantity: item.quantity, size: item.size, color: item.color })),
+      })
+      setOrderResult(result.order)
+      setOrderPlaced(true)
+      setCart([])
+      notify('Commande enregistrée')
+    } catch (submissionError) {
+      setError(submissionError.message || 'Impossible d’enregistrer la commande.')
+    }
   }
-  if (orderPlaced) return <section className="checkout-page container"><div className="success-page"><div className="success-icon"><CheckCircle2 size={42} /></div><span className="kicker">MERCI POUR TA CONFIANCE</span><h1>Commande confirmée.</h1><p>Ton lien de paiement pour l’acompte de 50 % sera envoyé par WhatsApp au <b>{form.phone || '+221 77 000 00 00'}</b>. Notre équipe te recontacte ensuite pour confirmer la livraison.</p><div className="success-card"><div><span>Référence</span><b>DT-2026-1048</b></div><div><span>Statut</span><b className="status-pill green">En attente de paiement</b></div></div><button className="button button-dark" onClick={() => { setOrderPlaced(false); navigate('/') }}>Retourner à l’accueil <ArrowRight size={16} /></button></div></section>
+  if (orderPlaced) return <section className="checkout-page container"><div className="success-page"><div className="success-icon"><CheckCircle2 size={42} /></div><span className="kicker">MERCI POUR TA CONFIANCE</span><h1>Commande confirmée.</h1><p>Ton lien de paiement pour l’acompte de 50 % sera envoyé par WhatsApp au <b>{form.phone || '+221 77 000 00 00'}</b>. Notre équipe te recontacte ensuite pour confirmer la livraison.</p><div className="success-card"><div><span>Référence</span><b>{orderResult?.reference || 'En cours de génération'}</b></div><div><span>Acompte</span><b>{orderResult?.deposit_amount ? money(orderResult.deposit_amount) : '50 % du total'}</b></div><div><span>Statut</span><b className="status-pill green">En attente de paiement</b></div></div><button className="button button-dark" onClick={() => { setOrderPlaced(false); navigate('/') }}>Retourner à l’accueil <ArrowRight size={16} /></button></div></section>
   return <section className="checkout-page container"><div className="breadcrumbs"><button onClick={() => navigate('/panier')}>Panier</button><ChevronRight size={14} /><span>Paiement</span></div><div className="checkout-head"><div><span className="kicker">DERNIÈRE ÉTAPE</span><h1>Finaliser la commande</h1></div><span className="checkout-secure"><ShieldCheck size={16} /> Checkout sécurisé</span></div><form className="checkout-layout" onSubmit={submit}><div className="checkout-form"><div className="checkout-card"><div className="card-title"><span>01</span><div><h2>Contact</h2><p>Déjà client ? <button type="button" onClick={() => navigate('/compte')}>Se connecter</button></p></div></div><div className="form-grid"><Field label="Prénom" value={form.firstName} onChange={value => update('firstName', value)} required /><Field label="Nom" value={form.lastName} onChange={value => update('lastName', value)} required /><Field label="Téléphone WhatsApp" value={form.phone} onChange={value => update('phone', value)} placeholder="+221 77 000 00 00" required wide /></div></div><div className="checkout-card"><div className="card-title"><span>02</span><div><h2>Mode de réception</h2><p>Choisis ce qui te convient le mieux.</p></div></div><div className="delivery-options"><button type="button" className={mode === 'delivery' ? 'delivery-option active' : 'delivery-option'} onClick={() => setMode('delivery')}><Truck /><span><b>Expédier ma commande</b><small>À partir de 2 000 FCFA · 24–48h</small></span><Check size={17} /></button><button type="button" className={mode === 'pickup' ? 'delivery-option active' : 'delivery-option'} onClick={() => setMode('pickup')}><Store /><span><b>Retrait au showroom</b><small>Gratuit · Almadies, Dakar</small></span><Check size={17} /></button></div>{mode === 'delivery' && <div className="form-grid address-grid"><Field label="Adresse de livraison" value={form.address} onChange={value => update('address', value)} placeholder="Quartier, rue, repère..." required wide /><Field label="Ville" value={form.city} onChange={value => update('city', value)} required /></div>}{mode === 'pickup' && <div className="pickup-note"><MapPin size={17} /><span>Showroom Dakar Trend<br /><small>Route des Almadies, Dakar · Lun–Sam 10h–19h</small></span></div>}</div><div className="checkout-card"><div className="card-title"><span>03</span><div><h2>Paiement</h2><p>Acompte de 50 % par lien sécurisé envoyé sur WhatsApp.</p></div></div><div className="payment-options"><button type="button" className={payment === 'wave' ? 'payment-option active' : 'payment-option'} onClick={() => setPayment('wave')}><span className="payment-logo wave">W</span><span><b>Wave</b><small>Lien de paiement WhatsApp</small></span><Check size={17} /></button><button type="button" className={payment === 'orange' ? 'payment-option active' : 'payment-option'} onClick={() => setPayment('orange')}><span className="payment-logo orange">OM</span><span><b>Orange Money</b><small>Lien de paiement WhatsApp</small></span><Check size={17} /></button></div><button type="button" className="how-pay"><HelpCircle size={16} /> Mode d’emploi du paiement <ArrowRight size={14} /></button></div>{error && <div className="form-error"><Wrench size={16} /> {error}</div>}<button type="submit" className="button button-coral checkout-submit">Confirmer la commande <ArrowRight size={18} /></button></div><OrderSummary cartTotal={cartTotal} navigate={navigate} /></form></section>
 }
 
