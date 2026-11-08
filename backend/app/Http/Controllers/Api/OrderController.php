@@ -20,7 +20,7 @@ class OrderController extends Controller
             'delivery_mode' => ['required', Rule::in(['delivery', 'pickup'])], 'address' => ['required_if:delivery_mode,delivery', 'nullable', 'string'],
             'city' => ['required_if:delivery_mode,delivery', 'nullable', 'string', 'max:100'],
             'payment_method' => ['required', Rule::in(['wave', 'orange'])],
-            'items' => ['required', 'array', 'min:1'], 'items.*.product_id' => ['required', 'integer'], 'items.*.quantity' => ['required', 'integer', 'min:1'],
+            'items' => ['required', 'array', 'min:1'], 'items.*.product_id' => ['required'], 'items.*.quantity' => ['required', 'integer', 'min:1'],
             'items.*.size' => ['nullable', 'string', 'max:30'], 'items.*.color' => ['nullable', 'string', 'max:50'],
         ]);
 
@@ -28,7 +28,7 @@ class OrderController extends Controller
             $lines = [];
             $subtotal = 0;
             foreach ($data['items'] as $item) {
-                $product = Product::whereKey($item['product_id'])->where('is_active', true)->lockForUpdate()->firstOrFail();
+                $product = Product::where(fn ($query) => $query->whereKey($item['product_id'])->orWhere('sku', $item['product_id']))->where('is_active', true)->lockForUpdate()->firstOrFail();
                 if ($product->stock < $item['quantity']) abort(422, "Stock insuffisant pour {$product->name}.");
                 $lineTotal = $product->price * $item['quantity']; $subtotal += $lineTotal;
                 $lines[] = [$product, $item, $lineTotal];

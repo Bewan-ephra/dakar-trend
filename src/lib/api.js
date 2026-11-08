@@ -24,10 +24,10 @@ export async function fetchCatalog() {
     if (!response.ok) throw new Error(`Catalog API ${response.status}`)
     const payload = await response.json()
     const remoteProducts = (payload.data || []).map(normalizeProduct)
-    return remoteProducts.length ? remoteProducts : fallbackProducts
+    return remoteProducts.length ? remoteProducts : fallbackProducts.map(item => ({ ...item, backendId: Number(String(item.id).replace('PRD-', '')) }))
   } catch (error) {
     console.warn('Backend Laravel indisponible, utilisation du catalogue local.', error)
-    return fallbackProducts
+    return fallbackProducts.map(item => ({ ...item, backendId: Number(String(item.id).replace('PRD-', '')) }))
   }
 }
 
