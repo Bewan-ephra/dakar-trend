@@ -9,4 +9,5 @@ Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
 Route::post('/orders', [OrderController::class, 'store']);
+Route::get('/admin/orders', [OrderController::class, 'index']);
 Route::get('/orders/{reference}', [OrderController::class, 'show']);

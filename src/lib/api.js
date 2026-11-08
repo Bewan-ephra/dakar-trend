@@ -41,3 +41,9 @@ export async function createOrder(payload) {
   if (!response.ok) throw new Error(data.message || 'Impossible de créer la commande.')
   return data
 }
+
+export async function fetchOrders() {
+  const response = await fetch(`${API_URL}/admin/orders?per_page=50`)
+  if (!response.ok) throw new Error(`Orders API ${response.status}`)
+  return response.json()
+}

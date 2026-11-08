@@ -12,6 +12,13 @@ use Illuminate\Validation\Rule;
 
 class OrderController extends Controller
 {
+    public function index(Request $request)
+    {
+        $query = Order::with('payments')->latest();
+        if ($request->filled('status')) $query->where('order_status', $request->string('status'));
+        return response()->json($query->paginate(min((int) $request->input('per_page', 20), 50)));
+    }
+
     public function store(Request $request)
     {
         $data = $request->validate([
