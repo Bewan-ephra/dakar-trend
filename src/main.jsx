@@ -322,7 +322,7 @@ function AdminProducts({ notify }) { return <div className="admin-content"><div 
 function AdminOrders({ notify }) {
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
-  useEffect(() => { fetchOrders().then(payload => setOrders(payload.data || [])).catch(() => notify('Impossible de charger les commandes Laravel')).finally(() => setLoading(false)) }, [])
+  useEffect(() => { fetchOrders().then(payload => setOrders(payload.data || [])).catch(error => { if (error.message === 'AUTH_REQUIRED') window.location.href = 'http://127.0.0.1:8000/auth/login'; else notify('Impossible de charger les commandes Laravel') }).finally(() => setLoading(false)) }, [])
   const tone = status => status === 'delivered' ? 'green' : status === 'shipped' ? 'purple' : status === 'confirmed' ? 'blue' : 'yellow'
   const label = status => ({ pending_confirmation: 'À confirmer', confirmed: 'Confirmée', processing: 'En préparation', shipped: 'Expédiée', delivered: 'Livrée', cancelled: 'Annulée' }[status] || status)
   const changeStatus = async (order, value) => { try { await updateOrder(order.id, { order_status: value }); setOrders(current => current.map(item => item.id === order.id ? { ...item, order_status: value } : item)); notify('Statut de la commande mis à jour') } catch (error) { notify(error.message) } }

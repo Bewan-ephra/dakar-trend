@@ -43,7 +43,8 @@ export async function createOrder(payload) {
 }
 
 export async function fetchOrders() {
-  const response = await fetch(`${API_URL}/admin/orders?per_page=50`)
+  const response = await fetch(`${API_URL}/admin/orders?per_page=50`, { credentials: 'include' })
+  if (response.status === 401) throw new Error('AUTH_REQUIRED')
   if (!response.ok) throw new Error(`Orders API ${response.status}`)
   return response.json()
 }
@@ -53,6 +54,7 @@ export async function updateOrder(orderId, payload) {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify(payload),
+    credentials: 'include',
   })
   const data = await response.json()
   if (!response.ok) throw new Error(data.message || 'Impossible de mettre à jour la commande.')

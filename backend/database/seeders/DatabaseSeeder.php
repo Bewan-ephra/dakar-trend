@@ -28,6 +28,6 @@ class DatabaseSeeder extends Seeder
                 'gallery' => $item['gallery'], 'stock' => $item['stock'], 'is_flash' => $item['isFlash'], 'is_active' => true,
             ]);
         }
-        User::updateOrCreate(['email' => 'admin@dakartend.sn'], ['name' => 'Dakar Trend Admin', 'password' => 'ChangeMe_2026!']);
+        User::updateOrCreate(['email' => 'admin@dakartend.sn'], ['name' => 'Dakar Trend Admin', 'password' => 'ChangeMe_2026!', 'is_admin' => true]);
     }
 }
