@@ -185,3 +185,4 @@ kbd { padding:4px 7px; border:1px solid #dbd9d4; border-radius:3px; background:#
 .payment-logo.cod { background:#17171b; color:#fff; font-size:18px; }
 .table-product-button { display:flex; align-items:center; gap:9px; width:100%; padding:0; border:0; background:none; text-align:left; cursor:pointer; color:inherit; }
 .table-product-button:hover b { color:var(--coral); }
+.admin-head-actions { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
