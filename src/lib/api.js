@@ -74,3 +74,7 @@ export async function requireDepositForPhone(phone, reason) {
   if (!response.ok) throw new Error(data.message || 'Impossible d’enregistrer la règle client.')
   return data
 }
+
+export async function logoutAdmin() {
+  await fetch(`${API_URL.replace(/\/api$/, '')}/auth/logout`, { method: 'POST', credentials: 'include', headers: { Accept: 'application/json' } })
+}
