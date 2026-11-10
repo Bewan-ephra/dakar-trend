@@ -186,3 +186,8 @@ kbd { padding:4px 7px; border:1px solid #dbd9d4; border-radius:3px; background:#
 .table-product-button { display:flex; align-items:center; gap:9px; width:100%; padding:0; border:0; background:none; text-align:left; cursor:pointer; color:inherit; }
 .table-product-button:hover b { color:var(--coral); }
 .admin-head-actions { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.payment-rule-alert { margin:12px 0; padding:12px 14px; background:#fff0f2; color:#b52948; border:1px solid #ffd2da; font-size:12px; font-weight:700; }
+.payment-option:disabled { opacity:.45; cursor:not-allowed; }
+.admin-helper { margin:-4px 0 14px; color:#77747e; font-size:12px; }
+.admin-row-actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.text-link.danger { color:#bd2847; }
