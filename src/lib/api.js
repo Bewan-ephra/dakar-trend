@@ -67,3 +67,10 @@ export async function updateOrder(orderId, payload) {
   if (!response.ok) throw new Error(data.message || 'Impossible de mettre à jour la commande.')
   return data
 }
+
+export async function requireDepositForPhone(phone, reason) {
+  const response = await fetch(`${API_URL}/admin/payment-rules`, { method: 'POST', credentials: 'include', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ phone, reason }) })
+  const data = await response.json()
+  if (!response.ok) throw new Error(data.message || 'Impossible d’enregistrer la règle client.')
+  return data
+}

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\CustomerPaymentRuleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\EnsureAdmin;
@@ -15,5 +16,7 @@ Route::middleware(['web', EnsureAdmin::class])->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::get('/admin/orders', [OrderController::class, 'index']);
     Route::patch('/admin/orders/{order}', [OrderController::class, 'update']);
+    Route::get('/admin/payment-rules', [CustomerPaymentRuleController::class, 'index']);
+    Route::post('/admin/payment-rules', [CustomerPaymentRuleController::class, 'store']);
 });
 Route::get('/orders/{reference}', [OrderController::class, 'show']);

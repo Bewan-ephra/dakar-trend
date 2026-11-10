@@ -1,5 +1,3 @@
-
-
 ## Backend Laravel local
 
 Le backend Laravel est maintenant situé dans `backend/` et utilise MySQL en local. PHP 8.3, Composer et MySQL Server doivent être installés sur la machine.
@@ -26,3 +24,9 @@ Mot de passe : ChangeMe_2026!
 ```
 
 Après connexion, ouvrez `http://localhost:3000/admin` puis la section **Commandes**. Les routes `/api/admin/*` exigent une session administrateur. Changez ce mot de passe avant toute mise en ligne.
+
+## Politique de paiement
+
+Le checkout propose par défaut le **paiement à la livraison** (`cod`) : aucune avance n’est demandée et `deposit_amount` vaut zéro. Wave et Orange Money restent disponibles pour les clients qui préfèrent régler un acompte de 50 % par lien WhatsApp.
+
+Depuis **Admin → Commandes**, l’action **Acompte obligatoire** enregistre le numéro du client dans `customer_payment_rules`. Une prochaine commande utilisant ce numéro ne pourra plus sélectionner le paiement à la livraison : l’API demandera un acompte de 50 % via Wave ou Orange Money. Cette règle est destinée aux commandes non honorées à la livraison et doit être appliquée avec discernement.

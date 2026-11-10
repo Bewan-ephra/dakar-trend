@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Payment;
 use App\Models\Product;
+use App\Models\CustomerPaymentRule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -26,11 +27,15 @@ class OrderController extends Controller
             'phone' => ['required', 'string', 'max:30'], 'email' => ['nullable', 'email'],
             'delivery_mode' => ['required', Rule::in(['delivery', 'pickup'])], 'address' => ['required_if:delivery_mode,delivery', 'nullable', 'string'],
             'city' => ['required_if:delivery_mode,delivery', 'nullable', 'string', 'max:100'],
-            'payment_method' => ['required', Rule::in(['wave', 'orange'])],
+            'payment_method' => ['required', Rule::in(['cod', 'wave', 'orange'])],
             'items' => ['required', 'array', 'min:1'], 'items.*.product_id' => ['required'], 'items.*.quantity' => ['required', 'integer', 'min:1'],
             'items.*.size' => ['nullable', 'string', 'max:30'], 'items.*.color' => ['nullable', 'string', 'max:50'],
         ]);
 
+        $phoneKey = preg_replace('/\D+/', '', $data['phone']);
+        if ($data['payment_method'] === 'cod' && CustomerPaymentRule::where('phone_key', $phoneKey)->where('requires_deposit', true)->exists()) {
+            abort(422, 'Ce numéro doit régler un acompte de 50 % avant la livraison. Choisissez Wave ou Orange Money.');
+        }
         $order = DB::transaction(function () use ($data) {
             $lines = [];
             $subtotal = 0;
@@ -42,13 +47,13 @@ class OrderController extends Controller
                 $product->decrement('stock', $item['quantity']);
             }
             $shipping = $data['delivery_mode'] === 'pickup' || $subtotal >= 50000 ? 0 : 2000;
-            $total = $subtotal + $shipping; $deposit = (int) ceil($total / 2);
-            $order = Order::create([...$data, 'reference' => 'DT-'.now()->format('Ymd').'-'.strtoupper(str()->random(5)), 'subtotal' => $subtotal, 'shipping_fee' => $shipping, 'total' => $total, 'deposit_amount' => $deposit, 'payment_status' => 'pending', 'order_status' => 'pending_confirmation']);
+            $total = $subtotal + $shipping; $deposit = $data['payment_method'] === 'cod' ? 0 : (int) ceil($total / 2);
+            $order = Order::create([...$data, 'reference' => 'DT-'.now()->format('Ymd').'-'.strtoupper(str()->random(5)), 'subtotal' => $subtotal, 'shipping_fee' => $shipping, 'total' => $total, 'deposit_amount' => $deposit, 'payment_status' => $data['payment_method'] === 'cod' ? 'cod_pending' : 'pending', 'order_status' => 'pending_confirmation']);
             foreach ($lines as [$product, $item, $lineTotal]) $order->items()->create(['product_id' => $product->id, 'product_name' => $product->name, 'sku' => $product->sku, 'unit_price' => $product->price, 'quantity' => $item['quantity'], 'size' => $item['size'] ?? null, 'color' => $item['color'] ?? null, 'line_total' => $lineTotal]);
-            $order->payments()->create(['method' => $data['payment_method'], 'amount' => $deposit, 'status' => 'pending', 'notes' => 'Lien de paiement à envoyer par WhatsApp.']);
+            $order->payments()->create(['method' => $data['payment_method'], 'amount' => $deposit, 'status' => $data['payment_method'] === 'cod' ? 'cod' : 'pending', 'notes' => $data['payment_method'] === 'cod' ? 'Paiement à la livraison.' : 'Acompte de 50 % à régler par lien WhatsApp.']);
             return $order->load('items', 'payments');
         });
-        return response()->json(['message' => 'Commande enregistrée. Le lien de paiement de l’acompte sera envoyé par WhatsApp.', 'order' => $order], 201);
+        return response()->json(['message' => $data['payment_method'] === 'cod' ? 'Commande enregistrée. Paiement à la livraison.' : 'Commande enregistrée. Le lien de paiement de l’acompte sera envoyé par WhatsApp.', 'order' => $order], 201);
     }
 
     public function show(string $reference)

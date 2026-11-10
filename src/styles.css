@@ -181,3 +181,5 @@ kbd { padding:4px 7px; border:1px solid #dbd9d4; border-radius:3px; background:#
 .text-link { display:inline-flex; align-items:center; gap:4px; margin-top:5px; margin-right:8px; padding:0; border:0; background:none; color:var(--coral); cursor:pointer; font:inherit; font-size:9px; font-weight:700; }
 .text-link:hover { text-decoration:underline; }
 @media (max-width: 700px) { .text-link { font-size:10px; } .admin-status-select { min-width:115px; } }
+
+.payment-logo.cod { background:#17171b; color:#fff; font-size:18px; }
