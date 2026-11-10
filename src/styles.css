@@ -191,3 +191,13 @@ kbd { padding:4px 7px; border:1px solid #dbd9d4; border-radius:3px; background:#
 .admin-helper { margin:-4px 0 14px; color:#77747e; font-size:12px; }
 .admin-row-actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 .text-link.danger { color:#bd2847; }
+.risk-rule-form { display:flex; gap:10px; align-items:end; flex-wrap:wrap; padding:14px; margin:0 0 16px; background:#faf8f8; border:1px solid #ece7e7; }
+.risk-rule-form label { display:grid; gap:6px; min-width:220px; flex:1; font-size:12px; font-weight:700; }
+.risk-rule-form input { border:1px solid #ddd8d8; padding:10px 12px; font:inherit; background:#fff; }
+.admin-dialog-backdrop { position:fixed; inset:0; z-index:50; display:grid; place-items:center; padding:20px; background:rgba(20,18,24,.45); }
+.admin-dialog { width:min(440px,100%); display:grid; gap:14px; padding:24px; background:#fff; box-shadow:0 20px 60px rgba(0,0,0,.2); }
+.admin-dialog h3 { margin:0; font-size:20px; }
+.admin-dialog p { margin:0; color:#77747e; font-size:13px; }
+.admin-dialog label { display:grid; gap:7px; font-size:12px; font-weight:700; }
+.admin-dialog input { padding:11px 12px; border:1px solid #ddd8d8; font:inherit; }
+.admin-dialog > div { display:flex; gap:8px; justify-content:flex-end; }

@@ -1,6 +1,6 @@
 import { products as fallbackProducts } from '../data/products'
 
-const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000/api').replace(/\/$/, '')
+const API_URL = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '')
 
 function normalizeProduct(item) {
   const category = typeof item.category === 'string' ? item.category : item.category?.name
