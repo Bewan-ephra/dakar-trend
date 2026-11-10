@@ -62,10 +62,17 @@ class OrderController extends Controller
             'order_status' => ['sometimes', Rule::in(['pending_confirmation', 'confirmed', 'processing', 'shipped', 'delivered', 'cancelled'])],
             'payment_status' => ['sometimes', Rule::in(['pending', 'link_sent', 'paid', 'failed'])],
             'payment_reference' => ['nullable', 'string', 'max:120'],
+            'payment_link' => ['nullable', 'url', 'max:2000'],
         ]);
         $order->update(collect($data)->only(['order_status', 'payment_status'])->all());
-        if (!empty($data['payment_reference'])) {
-            $order->payments()->latest()->first()?->update(['external_reference' => $data['payment_reference'], 'status' => $data['payment_status'] ?? 'paid', 'paid_at' => ($data['payment_status'] ?? 'paid') === 'paid' ? now() : null]);
+        if (!empty($data['payment_reference']) || !empty($data['payment_link'])) {
+            $payment = $order->payments()->latest()->first();
+            $payment?->update([
+                'external_reference' => $data['payment_reference'] ?? $payment->external_reference,
+                'payment_link' => $data['payment_link'] ?? $payment->payment_link,
+                'status' => $data['payment_status'] ?? (!empty($data['payment_link']) ? 'link_sent' : 'paid'),
+                'paid_at' => ($data['payment_status'] ?? '') === 'paid' ? now() : $payment->paid_at,
+            ]);
         }
         return response()->json($order->fresh()->load('payments'));
     }
