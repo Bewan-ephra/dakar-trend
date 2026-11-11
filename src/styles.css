@@ -210,6 +210,29 @@ kbd { padding:4px 7px; border:1px solid #dbd9d4; border-radius:3px; background:#
 .admin-dialog label { display:grid; gap:7px; font-size:12px; font-weight:700; }
 .admin-dialog input { padding:11px 12px; border:1px solid #ddd8d8; font:inherit; }
 .admin-dialog > div { display:flex; gap:8px; justify-content:flex-end; }
+.field-help { display:block; margin-top:4px; color:#77747e; font-size:11px; font-weight:400; line-height:1.4; }
+.product-image-preview { width:82px; height:105px; margin-top:9px; border:1px solid var(--line); object-fit:cover; }
+.content-editor { width:min(520px,100%); }
+.content-editor textarea { padding:11px 12px; border:1px solid #ddd8d8; font:inherit; resize:vertical; }
+.content-editor textarea:focus,.content-editor input:focus { border-color:var(--coral); outline:none; }
+.product-form-grid input[type=file] { padding:8px; background:#faf9f8; cursor:pointer; }
+
+/* Lisibilité : les informations importantes doivent être immédiatement visibles. */
+body { font-size:15px; }
+.button { font-size:13px; }
+.product-info h3 { font-size:13px; }
+.product-meta { font-size:10px; }
+.price-row strong { font-size:14px; }
+.admin-menu button { font-size:13px; }
+.admin-actions > button:first-child { font-size:12px; }
+.admin-card-head > button:not(.more-button),.admin-search input { font-size:12px; }
+.table-row { font-size:12px; }
+.table-heading { font-size:10px; }
+.table-product b { font-size:12px; }
+.table-product b small,.table-row > span > small { font-size:10px; }
+.admin-status-select { font-size:11px; }
+.text-link { font-size:11px; }
+.content-card p,.manager-products { font-size:11px; }
 .product-form { margin-bottom:16px; }
 .product-form-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:20px; }
 .product-form-grid label { display:grid; gap:6px; color:#77747e; font-size:10px; font-weight:700; }

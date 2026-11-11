@@ -28,6 +28,7 @@ Après connexion, ouvrez `http://localhost:3000/admin` puis la section **Command
 ## Gestion du catalogue
 
 Dans **Admin → Produits**, le catalogue est connecté à MySQL. Le bouton **Ajouter un produit** permet de renseigner le nom, la référence SKU, la catégorie, les prix, le stock, l’image, la description et le statut. Chaque ligne peut être modifiée ou supprimée. Un produit déjà présent dans une commande est automatiquement archivé au lieu d’être effacé, afin de préserver l’historique des ventes. Les produits actifs sont immédiatement utilisés par la boutique.
+Les images se sélectionnent maintenant directement depuis l’ordinateur (JPG, PNG ou WebP, 5 Mo maximum) et sont stockées par Laravel.
 
 ## Politique de paiement
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -64,6 +65,21 @@ class ProductController extends Controller
         return response()->json(['message' => 'Produit supprimé.']);
     }
 
+    public function uploadImage(Request $request)
+    {
+        $request->validate(['image' => ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5120']]);
+        $path = $request->file('image')->store('products', 'public');
+        return response()->json(['url' => '/api/media/'.$path]);
+    }
+
+    public function image(string $path)
+    {
+        abort_unless(Str::startsWith($path, 'products/') && ! Str::contains($path, '..'), 404);
+        $diskPath = Storage::disk('public')->path($path);
+        abort_unless(is_file($diskPath), 404);
+        return response()->file($diskPath);
+    }
+
     private function validated(Request $request, ?Product $product = null): array
     {
         return $request->validate([
@@ -77,7 +93,7 @@ class ProductController extends Controller
             'colors' => ['nullable', 'array'],
             'sizes' => ['nullable', 'array'],
             'gallery' => ['nullable', 'array'],
-            'gallery.*' => ['nullable', 'url', 'max:1000'],
+            'gallery.*' => ['nullable', 'string', 'max:1000'],
             'stock' => ['required', 'integer', 'min:0'],
             'is_flash' => ['sometimes', 'boolean'],
             'is_active' => ['sometimes', 'boolean'],

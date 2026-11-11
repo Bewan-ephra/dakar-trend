@@ -57,6 +57,15 @@ export async function deleteProduct(productId) {
   return data
 }
 
+export async function uploadProductImage(file) {
+  const body = new FormData()
+  body.append('image', file)
+  const response = await fetch(`${API_URL}/admin/uploads/image`, { method: 'POST', credentials: 'include', headers: { Accept: 'application/json' }, body })
+  const data = await response.json().catch(() => ({}))
+  if (!response.ok) throw new Error(data.message || Object.values(data.errors || {})[0]?.[0] || 'Impossible d’importer cette image.')
+  return data.url
+}
+
 export async function createOrder(payload) {
   const response = await fetch(`${API_URL}/orders`, {
     method: 'POST',

@@ -11,6 +11,7 @@ use App\Http\Middleware\EnsureAdmin;
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
+Route::get('/media/{path}', [ProductController::class, 'image'])->where('path', '.*');
 Route::post('/orders', [OrderController::class, 'store']);
 Route::get('/payment-rule-check', [CustomerPaymentRuleController::class, 'check']);
 Route::post('/auth/login', [AuthController::class, 'localLogin'])->middleware('web')->name('api.auth.login');
@@ -21,6 +22,7 @@ Route::middleware(['web', EnsureAdmin::class])->group(function () {
     Route::post('/admin/products', [ProductController::class, 'store']);
     Route::patch('/admin/products/{product}', [ProductController::class, 'update']);
     Route::delete('/admin/products/{product}', [ProductController::class, 'destroy']);
+    Route::post('/admin/uploads/image', [ProductController::class, 'uploadImage']);
     Route::get('/admin/orders', [OrderController::class, 'index']);
     Route::patch('/admin/orders/{order}', [OrderController::class, 'update']);
     Route::get('/admin/payment-rules', [CustomerPaymentRuleController::class, 'index']);
