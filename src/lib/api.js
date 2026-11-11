@@ -50,10 +50,11 @@ export async function fetchOrders() {
 }
 
 export async function getCurrentUser() {
-  const response = await fetch(`${API_URL}/me`, { credentials: 'include', headers: { Accept: 'application/json' } })
+  const response = await fetch(`${API_URL}/me`, { credentials: 'include', headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' } })
   if (response.status === 401) return null
   if (!response.ok) throw new Error(`Auth API ${response.status}`)
-  return (await response.json()).user
+  const payload = await response.json()
+  return payload.user || null
 }
 
 export async function updateOrder(orderId, payload) {

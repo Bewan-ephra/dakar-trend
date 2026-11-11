@@ -54,12 +54,18 @@ function App() {
 
   useEffect(() => {
     if (path !== '/admin') { setAdminAccess('idle'); return undefined }
+    let active = true
     setAdminAccess('checking')
     getCurrentUser().then(user => {
       if (user) setAdminAccess('authenticated')
       else window.location.href = '/auth/login'
-    }).catch(() => setAdminAccess('error'))
-    return undefined
+    }).catch(() => {
+      if (active) {
+        setAdminAccess('error')
+        window.setTimeout(() => { window.location.href = '/auth/login' }, 250)
+      }
+    })
+    return () => { active = false }
   }, [path])
 
   const navigate = (nextPath) => {
@@ -109,7 +115,7 @@ function App() {
   }
 
   const renderPage = () => {
-    if (path === '/admin') return adminAccess === 'authenticated' ? <AdminPage section={adminSection} setSection={setAdminSection} navigate={navigate} notify={notify} /> : <section className="container info-page"><span className="kicker">BACK OFFICE</span><h1>Vérification de la session…</h1><p>Redirection vers la connexion administrateur.</p></section>
+    if (path === '/admin') return adminAccess === 'authenticated' ? <AdminPage section={adminSection} setSection={setAdminSection} navigate={navigate} notify={notify} /> : <section className="container info-page"><span className="kicker">BACK OFFICE</span><h1>{adminAccess === 'error' ? 'Connexion nécessaire' : 'Vérification de la session…'}</h1><p>{adminAccess === 'error' ? 'La session a expiré. Redirection vers la connexion administrateur…' : 'Vérification de vos accès administrateur.'}</p><button className="button button-coral" onClick={() => { window.location.href = '/auth/login' }}>Se connecter</button></section>
     if (path === '/catalogue') return <CataloguePage products={catalogProducts} activeCategory={activeCategory} setActiveCategory={setActiveCategory} search={search} setSearch={setSearch} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/favoris') return <FavoritesPage products={favoriteProducts} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
     if (path === '/panier') return <CartPage cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} cartTotal={cartTotal} navigate={navigate} />
@@ -150,7 +156,7 @@ function AdminLoginPage({ onSuccess }) {
     try {
       const response = await fetch('/api/auth/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
         credentials: 'include',
         body: JSON.stringify({ email, password }),
       })
