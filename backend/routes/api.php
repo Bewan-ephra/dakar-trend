@@ -13,6 +13,8 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
 Route::post('/orders', [OrderController::class, 'store']);
 Route::get('/payment-rule-check', [CustomerPaymentRuleController::class, 'check']);
+Route::post('/auth/login', [AuthController::class, 'localLogin'])->middleware('web')->name('api.auth.login');
+Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('web')->name('api.auth.logout');
 Route::middleware(['web', EnsureAdmin::class])->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::get('/admin/orders', [OrderController::class, 'index']);

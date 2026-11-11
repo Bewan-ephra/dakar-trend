@@ -120,6 +120,8 @@ function App() {
     return <HomePage products={catalogProducts} selectCategory={selectCategory} addToCart={addToCart} favorites={favorites} toggleFavorite={toggleFavorite} navigate={navigate} />
   }
 
+  if (path === '/auth/login') return <AdminLoginPage onSuccess={() => navigate('/admin')} />
+
   return (
     <div className="app-shell">
       <AnnouncementBar />
@@ -133,6 +135,46 @@ function App() {
       {toast && <div className="toast"><CheckCircle2 size={17} />{toast}</div>}
     </div>
   )
+}
+
+function AdminLoginPage({ onSuccess }) {
+  const [email, setEmail] = useState('admin@dakartend.sn')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const submit = async (event) => {
+    event.preventDefault()
+    setLoading(true)
+    setError('')
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email, password }),
+      })
+      const payload = await response.json().catch(() => ({}))
+      if (!response.ok) throw new Error(payload.message || payload.errors?.email?.[0] || 'Identifiants administrateur incorrects.')
+      onSuccess()
+    } catch (submitError) {
+      setError(submitError.message || 'Connexion impossible. Vérifiez que le serveur Laravel est démarré.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return <main className="admin-login-page"><form className="admin-login-card" onSubmit={submit}>
+    <span className="kicker">DAKAR TREND / BACK OFFICE</span>
+    <h1>Connexion administrateur</h1>
+    <p>Connectez-vous pour consulter les commandes et gérer la boutique.</p>
+    {error && <div className="admin-login-error" role="alert">{error}</div>}
+    <label htmlFor="admin-email">Email</label>
+    <input id="admin-email" type="email" value={email} onChange={event => setEmail(event.target.value)} required autoComplete="username" />
+    <label htmlFor="admin-password">Mot de passe</label>
+    <input id="admin-password" type="password" value={password} onChange={event => setPassword(event.target.value)} required autoComplete="current-password" />
+    <button className="button button-coral admin-login-submit" type="submit" disabled={loading}>{loading ? 'Connexion…' : 'Se connecter'}</button>
+  </form></main>
 }
 
 function AnnouncementBar() {

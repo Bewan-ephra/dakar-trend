@@ -76,5 +76,5 @@ export async function requireDepositForPhone(phone, reason) {
 }
 
 export async function logoutAdmin() {
-  await fetch(`${API_URL.replace(/\/api$/, '')}/auth/logout`, { method: 'POST', credentials: 'include', headers: { Accept: 'application/json' } })
+  await fetch(`${API_URL}/auth/logout`, { method: 'POST', credentials: 'include', headers: { Accept: 'application/json' } })
 }
