@@ -25,6 +25,10 @@ Mot de passe : ChangeMe_2026!
 
 Après connexion, ouvrez `http://localhost:3000/admin` puis la section **Commandes**. Les routes `/api/admin/*` exigent une session administrateur. Changez ce mot de passe avant toute mise en ligne.
 
+## Gestion du catalogue
+
+Dans **Admin → Produits**, le catalogue est connecté à MySQL. Le bouton **Ajouter un produit** permet de renseigner le nom, la référence SKU, la catégorie, les prix, le stock, l’image, la description et le statut. Chaque ligne peut être modifiée ou supprimée. Un produit déjà présent dans une commande est automatiquement archivé au lieu d’être effacé, afin de préserver l’historique des ventes. Les produits actifs sont immédiatement utilisés par la boutique.
+
 ## Politique de paiement
 
 Le checkout propose par défaut le **paiement à la livraison** (`cod`) : aucune avance n’est demandée et `deposit_amount` vaut zéro. Wave et Orange Money restent disponibles pour les clients qui préfèrent régler un acompte de 50 % par lien WhatsApp.

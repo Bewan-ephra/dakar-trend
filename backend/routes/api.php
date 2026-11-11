@@ -17,6 +17,10 @@ Route::post('/auth/login', [AuthController::class, 'localLogin'])->middleware('w
 Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('web')->name('api.auth.logout');
 Route::middleware(['web', EnsureAdmin::class])->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
+    Route::get('/admin/products', [ProductController::class, 'adminIndex']);
+    Route::post('/admin/products', [ProductController::class, 'store']);
+    Route::patch('/admin/products/{product}', [ProductController::class, 'update']);
+    Route::delete('/admin/products/{product}', [ProductController::class, 'destroy']);
     Route::get('/admin/orders', [OrderController::class, 'index']);
     Route::patch('/admin/orders/{order}', [OrderController::class, 'update']);
     Route::get('/admin/payment-rules', [CustomerPaymentRuleController::class, 'index']);

@@ -14,6 +14,7 @@ function normalizeProduct(item) {
     gallery,
     oldPrice: item.old_price ?? item.oldPrice,
     isFlash: item.is_flash ?? item.isFlash,
+    isActive: item.is_active ?? item.isActive,
     specs: item.specifications ?? item.specs ?? [],
   }
 }
@@ -29,6 +30,31 @@ export async function fetchCatalog() {
     console.warn('Backend Laravel indisponible, utilisation du catalogue local.', error)
     return fallbackProducts.map(item => ({ ...item, backendId: Number(String(item.id).replace('PRD-', '')) }))
   }
+}
+
+export async function fetchCategories() {
+  const response = await fetch(`${API_URL}/categories`)
+  if (!response.ok) throw new Error('Impossible de charger les catégories.')
+  return response.json()
+}
+
+export async function saveProduct(product, productId = null) {
+  const response = await fetch(`${API_URL}/admin/products${productId ? `/${productId}` : ''}`, {
+    method: productId ? 'PATCH' : 'POST',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(product),
+  })
+  const data = await response.json().catch(() => ({}))
+  if (!response.ok) throw new Error(data.message || Object.values(data.errors || {})[0]?.[0] || 'Impossible d’enregistrer le produit.')
+  return data
+}
+
+export async function deleteProduct(productId) {
+  const response = await fetch(`${API_URL}/admin/products/${productId}`, { method: 'DELETE', credentials: 'include', headers: { Accept: 'application/json' } })
+  const data = await response.json().catch(() => ({}))
+  if (!response.ok) throw new Error(data.message || 'Impossible de supprimer le produit.')
+  return data
 }
 
 export async function createOrder(payload) {
